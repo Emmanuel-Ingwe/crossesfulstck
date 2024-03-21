@@ -46,6 +46,14 @@ const index = () => {
                 <FooterColumn title={footerLinks[6].title} links={footerLinks[6].links} />
             </div>
         </div>
+
+        <div className="flexBetween footer_copyright">
+            <p>@ 2024 Crosses. All rights reserved</p>
+            <p className="text-gray">
+                <span className="text-black font-semibold">10,214</span>
+                Projects Submitted
+            </p>
+        </div>
     </footer>
   )
 }
