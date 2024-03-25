@@ -8,7 +8,7 @@ import { getCurrentUser } from '@/lib/session'
 type Props = {}
 
 const index = async (props: Props) => {
-    const session = await getCurrentUser
+    const session = await getCurrentUser()
 
 
   return (
@@ -27,9 +27,18 @@ const index = async (props: Props) => {
         </div>
 
         <div className="flexCenter gap-4">
-            {session ? (
+            {session?.user ? (
                 <>
-                    UserPhoto
+                  {session?.user?.image && (
+                      <Image
+                          src={session.user.image}
+                          width={40}
+                          height={40}
+                          className='rounded-full'
+                          alt={session.user.name}
+                          />
+                        )}
+
                     <Link href="/create-project">
                         Share Work
                     </Link>
