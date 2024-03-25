@@ -31,8 +31,8 @@ const index = () => {
     return (
       <div className="">
         {Object.values(providers).map(
-          (provider: provider, index) => (
-            <button className="" key={index}>{provider.id}</button>
+          (provider: Provider, index) => (
+            <button onClick={() => signIn(provider?.id)} className="" key={index}>{provider.id}</button>
           )
         )}
       </div>
