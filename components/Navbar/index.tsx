@@ -7,7 +7,7 @@ import AuthProviders from "@/components/AuthProviders"
 type Props = {}
 
 const index = (props: Props) => {
-    const session = {}
+    const session = null
 
 
   return (
