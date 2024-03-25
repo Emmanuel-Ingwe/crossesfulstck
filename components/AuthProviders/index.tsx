@@ -15,11 +15,21 @@ type Providers = {
 const index = () => {
   const [providers, setProviders] = useState<Providers | null>(null)
 
+  useEffect(() => {
+    const fetchProviders = async () => {
+      const res = await.getProviders();
+
+      setProviders(res)
+    }
+
+    fetchProviders()
+  }, [])
+
   if(providers) {
     return (
       <div className="">
         {Object.values(providers).map(
-          (provider: Provider, index) => (
+          (provider: provider, index) => (
             <button className="" key={index}>{provider.id}</button>
           )
         )}
