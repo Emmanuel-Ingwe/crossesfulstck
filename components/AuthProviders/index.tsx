@@ -17,7 +17,9 @@ const index = () => {
 
   useEffect(() => {
     const fetchProviders = async () => {
-      const res = await.getProviders();
+      const res = await getProviders();
+
+      console.log(res)
 
       setProviders(res)
     }
