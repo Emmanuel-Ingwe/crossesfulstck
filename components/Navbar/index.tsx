@@ -3,11 +3,12 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { NavLinks } from '@/constants'
 import AuthProviders from "@/components/AuthProviders"
+import { getCurrentUser } from '@/lib/session'
 
 type Props = {}
 
-const index = (props: Props) => {
-    const session = null
+const index = async (props: Props) => {
+    const session = await getCurrentUser
 
 
   return (
