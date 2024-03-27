@@ -9,7 +9,7 @@ const apiKey = isProduction ? process.env.NEXT_PUBLIC_GRAFBASE_API_KEY || '' : '
 const serverUrl = isProduction ? process.env.NEXT_PUBLIC_GRAFBASE_SERVER_URL || '' : 'http://localhost:3000'
 
 
-const client = new GraphQLClient('apiUrl')
+const client = new GraphQLClient(apiUrl)
 
 const makeGraphQlRequest = async (query: string, variables = {}) => {
     try {
