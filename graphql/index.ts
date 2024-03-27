@@ -8,3 +8,17 @@ export const getUserQuery = `query GetUser($email: string!) {
         linkedinUrl
     }
 }`
+
+export const creatUserMutation = `mutation CreateUser($input: UserCreateInput!) {
+    userCreate(input: $input) {
+        user {
+            name
+            email
+            avatarUrl
+            description
+            githubUrl
+            linkedinUrl
+            id
+        }
+    }
+}`
