@@ -6,7 +6,7 @@ import  JsonWebToken  from "jsonwebtoken";
 import { JWT } from "next-auth/jwt"
 import { Session } from "inspector";
 import { SessionInterface, UserProfile } from "@/common.types";
-import { getUser } from "./actions";
+import { createUser, getUser } from "./actions";
 
 export const authOptions: NextAuthOptions = {
     providers: [
@@ -36,7 +36,7 @@ export const authOptions: NextAuthOptions = {
                 const userExists = await getUser(user?.email as string) as { user?: UserProfile }
 
                 if (!userExists.user) {
-                    
+                    await createUser(user.name as string, user.email:string, user.image as string)
                 }
 
                 return true
