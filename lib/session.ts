@@ -17,7 +17,6 @@ export const authOptions: NextAuthOptions = {
     ],
     // jwt: {
     //     encode: ({ secret, token }) => {
-
     //     },
     //     decode: async ({ secret, token }) => {
 
